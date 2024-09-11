@@ -69,10 +69,10 @@ public:
      @return Current application instance pointer.
      */
     static Application* getInstance();
-
+#ifndef AX_DISABLE_DEPRECATED
     /** @deprecated Use getInstance() instead */
     AX_DEPRECATED_ATTRIBUTE static Application* sharedApplication();
-
+#endif
     /* override functions */
     virtual LanguageType getCurrentLanguage() override;
 
@@ -94,7 +94,7 @@ public:
      */
     virtual bool openURL(std::string_view url) override;
 
-
+#ifndef AX_DISABLE_DEPRECATED
     /**
      *  Sets the Resource root path.
      *  @deprecated Please use FileUtils::getInstance()->setSearchPaths() instead.
@@ -106,7 +106,7 @@ public:
      *  @deprecated Please use FileUtils::getInstance()->getSearchPaths() instead.
      */
     AX_DEPRECATED_ATTRIBUTE const std::string& getResourceRootPath();
-
+#endif
     /**
      @brief Get target platform
      */

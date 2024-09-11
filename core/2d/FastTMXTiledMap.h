@@ -204,9 +204,9 @@ public:
      *  animations are not enabled by default
      */
     void setTileAnimEnabled(bool enabled);
-
+#ifndef AX_DISABLE_DEPRECATED
     AX_DEPRECATED_ATTRIBUTE int getLayerNum() const { return getLayerCount(); }
-
+#endif
     int getLayerCount() const { return _layerCount; }
 
     std::string_view getResourceFile() const { return _tmxFile; }
@@ -268,4 +268,4 @@ private:
 // @API compatible
 typedef FastTMXTiledMap TMXTiledMap;
 
-}
+}  // namespace ax

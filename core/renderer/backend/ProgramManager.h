@@ -103,7 +103,7 @@ public:
      * Unload all program objects from cache.
      */
     void unloadAllPrograms();
-
+#ifndef AX_DISABLE_DEPRECATED
     /**
      * Remove a program object from cache.
      * @param program Specifies the program object to move.
@@ -119,7 +119,7 @@ public:
      * Remove all program objects from cache.
      */
     AX_DEPRECATED_ATTRIBUTE void removeAllPrograms() { unloadAllPrograms(); }
-
+#endif
 protected:
     ProgramManager();
     virtual ~ProgramManager();

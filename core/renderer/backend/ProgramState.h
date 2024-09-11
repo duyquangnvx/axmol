@@ -306,7 +306,7 @@ public:
     * so batch ID was set to -1 indicate batch was disabled
     */
     void updateBatchId();
-
+#ifndef AX_DISABLE_DEPRECATED
     /*
      * Follow API is deprecated, use getMutableVertexLayout instead
      */
@@ -316,7 +316,7 @@ public:
                                                  std::size_t offset,
                                                  bool needToBeNormallized);
     AX_DEPRECATED_ATTRIBUTE void setVertexStride(uint32_t stride);
-
+#endif
     /** Custom shader program's vertex layout maybe not setup
      * so engine specific render node(such as Sprite) should invoke this API when ProgramState changed
      */

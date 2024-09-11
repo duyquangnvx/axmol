@@ -60,10 +60,12 @@ namespace cocos2d = ax;
 #define CC_ASSERT                    AX_ASSERT
 #define CC_CONSTRUCTOR_ACCESS        public
 
+#ifndef AX_DISABLE_DEPRECATED
 #define CCLOG                        AXLOG
 #define CCLOGINFO                    AXLOGINFO
 #define CCLOGWARN                    AXLOGWARN
 #define CCLOGERROR                   AXLOGERROR
+#endif
 
 #define CC_DEPRECATED_ATTRIBUTE      AX_DEPRECATED_ATTRIBUTE
 
